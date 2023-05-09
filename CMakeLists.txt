@@ -12,6 +12,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
+if(UNIX)
+        set(SystemDepended grille-crypt/src/LinuxRandomStream.cpp grille-crypt/src/LinuxFactory.h grille-crypt/src/LinuxFactory.cpp grille-crypt/src/LinuxFactoryBuilder.cpp)
+        message(STATUS "Build for unix")
+else()
+    message(STATUS "Build not for unix")
+endif()
+
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
@@ -19,7 +26,10 @@ set(PROJECT_SOURCES
         actionwindow.h
         actionwindow.cpp
         actiontypes.h
+        grille-crypt/src/GrilleKey.h grille-crypt/src/GrilleKey.cpp grille-crypt/src/AbstractCryptStream.h grille-crypt/src/AbstractCryptStream.cpp grille-crypt/src/EncryptStream.h grille-crypt/src/EncryptStream.cpp grille-crypt/src/AbstractRandomStream.h grille-crypt/src/LinuxRandomStream.h grille-crypt/src/AbstractSystemDependedFactory.h grille-crypt/src/AbstractSystemDependedFactory.cpp grille-crypt/src/DecryptStream.h grille-crypt/src/DecryptStream.cpp grille-crypt/src/KeyGenerator.h grille-crypt/src/KeyGenerator.cpp grille-crypt/src/XorCrypt.h grille-crypt/src/XorCrypt.cpp grille-crypt/src/converter.h grille-crypt/src/converter.cpp grille-crypt/src/FileFormatter.h grille-crypt/src/FileFormatter.cpp grille-crypt/src/FileValidator.h grille-crypt/src/FileValidator.cpp grille-crypt/src/GrilleCrypt.h grille-crypt/src/GrilleCrypt.cpp grille-crypt/src/Cli.h grille-crypt/src/Cli.cpp ${SystemDepended}
 )
+
+add_subdirectory(grille-crypt/)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(grille-crypt-qt

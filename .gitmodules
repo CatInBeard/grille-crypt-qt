@@ -1,0 +1,3 @@
+[submodule "grille-crypt"]
+	path = grille-crypt
+	url = git@github.com:CatInBeard/grille-crypt.git
