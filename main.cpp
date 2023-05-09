@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
+    w.setWindowTitle("Grille crypt Qt");
     w.show();
     return a.exec();
 }

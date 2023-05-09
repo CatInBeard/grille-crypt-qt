@@ -21,9 +21,28 @@
 
 #include "mainwindow.h"
 
+
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
+    : QWidget(parent)
 {
+
+    buttonEncrypt = new QPushButton("Ecnrypt");
+    buttonDecrypt = new QPushButton("Decrypt");
+
+    label = new QLabel();
+
+    label->setText("Choose what you will do with the file");
+
+
+    box = new QVBoxLayout();
+
+    box->addWidget(label);
+    box->addSpacing(50);
+    box->addWidget(buttonEncrypt);
+    box->addWidget(buttonDecrypt);
+
+    setLayout(box);
+
 }
 
 MainWindow::~MainWindow()
