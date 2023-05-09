@@ -4,7 +4,7 @@
 [![archlinux package builder](https://github.com/CatInBeard/grille-crypt-qt/actions/workflows/arch_build.yaml/badge.svg)](https://github.com/CatInBeard/grille-crypt-qt/actions/workflows/arch_build.yaml)
 
 ## About
-Grille-crypt-qt is Qt application for grille-crypt CLI.
+Grille-crypt-qt is Qt application for [grille-crypt](https://github.com/CatInBeard/grille-crypt) CLI.
 
 ## Build
 To build grille-crypt:  
