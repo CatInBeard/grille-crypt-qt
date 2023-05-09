@@ -1,0 +1,20 @@
+name: archlinux package builder
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the tagged Docker image
+      run: cd build/archlinux/CI/ && ./ci_build.sh
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: arch package
+        path: |
+          build/archlinux/*.tar*
