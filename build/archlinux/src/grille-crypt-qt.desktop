@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Grille-crypt-qt
+GenericName=Grille-crypt-qt
+Comment=Encrypt your files
+Exec=grille-crypt-qt
+Type=Application
+Keywords=Encrypt;Crypt;
+Categories=Utility;

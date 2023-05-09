@@ -1,13 +1,16 @@
 pkgname="grille-crypt-qt"
 pkgver="0.1.0"
 pkgrel="1"
-pkgdesc="Grille-crypt provides you to encrypt and decrypt files with your key with Qt UI "
+pkgdesc="Grille-crypt-qt provides you to encrypt and decrypt files with your key with Qt UI "
 arch=($CARCH)
 license=("GPL3")
 source=("../bin/grille-crypt-qt")
 sha512sums=("SKIP")
 package() {
   mkdir -p "${pkgdir}/usr/bin"
+  mkdir -p "${pkgdir}/usr/share"
+  mkdir -p "${pkgdir}/usr/share/applications"
   cp "${srcdir}/grille-crypt-qt" "${pkgdir}/usr/bin/grille-crypt-qt"
+  cp "${srcdir}/grille-crypt-qt.desktop" "${pkgdir}/usr/share/applications/grille-crypt-qt.desktop"
   chmod +x "${pkgdir}/usr/bin/grille-crypt-qt"
 }
