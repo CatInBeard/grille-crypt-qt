@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
+    - name: test
+      run: chmod 777 build/archlinux/
     - name: Build the tagged Docker image
       run: cd build/archlinux/CI/ && ./ci_build.sh
     - name: Archive production artifacts
