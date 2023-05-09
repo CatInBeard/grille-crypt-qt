@@ -46,11 +46,20 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     connect(buttonEncrypt, SIGNAL(clicked()), this, SLOT(encryptButtonClicked()));
+    connect(buttonDecrypt, SIGNAL(clicked()), this, SLOT(decryptButtonClicked()));
 }
 
 void MainWindow::encryptButtonClicked(){
 
-    ew = new ActionWindow(0,ActionTypes::encrypt);
+    ActionWindow* ew = new ActionWindow(0,ActionTypes::encrypt);
+    windowList.push_back(ew);
+    ew->show();
+}
+
+void MainWindow::decryptButtonClicked(){
+
+    ActionWindow* ew = new ActionWindow(0,ActionTypes::decrypt);
+    windowList.push_back(ew);
     ew->show();
 }
 

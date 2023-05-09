@@ -39,13 +39,14 @@ public:
 
 private slots:
     void encryptButtonClicked();
+    void decryptButtonClicked();
 
 private:
     QVBoxLayout *box;
     QLabel *label;
     QPushButton *buttonEncrypt;
     QPushButton *buttonDecrypt;
-    ActionWindow *ew;
+    QList <ActionWindow* > windowList;
 };
 
 #endif // MAINWINDOW_H

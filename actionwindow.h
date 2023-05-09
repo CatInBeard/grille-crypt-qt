@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QList>
 #include "actiontypes.h"
 
 class ActionWindow : public QWidget
@@ -28,7 +29,6 @@ private:
     QPushButton *buttonAction;
     QPushButton *buttonInputFile;
     QPushButton *buttonOutputFile;
-    ActionWindow *ew;
 };
 
 #endif // ACTIONWINDOW_H
