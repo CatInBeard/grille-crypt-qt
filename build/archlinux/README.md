@@ -11,18 +11,18 @@ sudo pacman -Syu make cmake gcc git base-devel
 To make arch package:  
 
 ```
-git clone https://github.com/CatInBeard/grille-crypt.git
-cd grille-crypt/build/archlinux
+git clone https://github.com/CatInBeard/grille-crypt-qt.git
+cd grille-crypt-qt/build/archlinux
 ./build.sh
 ```
 
 To install package:  
 ```
-sudo pacman -U grille-crypt-0.1.0-1-x86_64.pkg.tar.zst
+sudo pacman -U grille-crypt-qt-0.1.0-1-x86_64.pkg.tar.zst
 ```
 ## Build with docker:
 ```
-git clone https://github.com/CatInBeard/grille-crypt.git  
-cd grille-crypt/build/archlinux/CI
+git clone https://github.com/CatInBeard/grille-crypt-qt.git  
+cd grille-crypt-qt/build/archlinux/CI
 ./ci_build.sh  
 ```
