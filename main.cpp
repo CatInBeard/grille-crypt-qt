@@ -17,17 +17,16 @@
  * If not, see <https://www.gnu.org/licenses/>.
  *
  */
-
-
-#include "mainwindow.h"
+#include "primarywindow.h"
 
 #include <QApplication>
+#include <QMainWindow>
+
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.setWindowTitle("Grille crypt Qt");
+    primarywindow w;
     w.show();
     return a.exec();
 }
