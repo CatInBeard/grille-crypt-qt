@@ -18,4 +18,4 @@ jobs:
       with:
         name: arch package
         path: |
-          build/archlinux/*.tar*
+          *.tar*
