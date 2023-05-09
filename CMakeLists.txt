@@ -29,8 +29,6 @@ set(PROJECT_SOURCES
         grille-crypt/src/GrilleKey.h grille-crypt/src/GrilleKey.cpp grille-crypt/src/AbstractCryptStream.h grille-crypt/src/AbstractCryptStream.cpp grille-crypt/src/EncryptStream.h grille-crypt/src/EncryptStream.cpp grille-crypt/src/AbstractRandomStream.h grille-crypt/src/LinuxRandomStream.h grille-crypt/src/AbstractSystemDependedFactory.h grille-crypt/src/AbstractSystemDependedFactory.cpp grille-crypt/src/DecryptStream.h grille-crypt/src/DecryptStream.cpp grille-crypt/src/KeyGenerator.h grille-crypt/src/KeyGenerator.cpp grille-crypt/src/XorCrypt.h grille-crypt/src/XorCrypt.cpp grille-crypt/src/converter.h grille-crypt/src/converter.cpp grille-crypt/src/FileFormatter.h grille-crypt/src/FileFormatter.cpp grille-crypt/src/FileValidator.h grille-crypt/src/FileValidator.cpp grille-crypt/src/GrilleCrypt.h grille-crypt/src/GrilleCrypt.cpp grille-crypt/src/Cli.h grille-crypt/src/Cli.cpp ${SystemDepended}
 )
 
-add_subdirectory(grille-crypt/)
-
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(grille-crypt-qt
         MANUAL_FINALIZATION
