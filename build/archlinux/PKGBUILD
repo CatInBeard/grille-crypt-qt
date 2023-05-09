@@ -8,6 +8,6 @@ source=("../bin/grille-crypt-qt")
 sha512sums=("SKIP")
 package() {
   mkdir -p "${pkgdir}/usr/bin"
-  cp "${srcdir}/grille-crypt" "${pkgdir}/usr/bin/grille-crypt-qt"
+  cp "${srcdir}/grille-crypt-qt" "${pkgdir}/usr/bin/grille-crypt-qt"
   chmod +x "${pkgdir}/usr/bin/grille-crypt-qt"
 }
