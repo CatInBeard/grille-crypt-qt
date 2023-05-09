@@ -1,6 +1,6 @@
 #include "encryptwindow.h"
 
-EncryptWindow::EncryptWindow(QWidget *parent)
+ActiontWindow::EncryptWindow(QWidget *parent)
     : QWidget{parent}
 {
 

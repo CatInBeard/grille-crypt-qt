@@ -27,7 +27,7 @@
 #include <QVBoxLayout>
 #include <QLabel>
 
-#include "encryptwindow.h"
+#include "actionwindow.h"
 
 class MainWindow : public QWidget
 {
@@ -45,7 +45,7 @@ private:
     QLabel *label;
     QPushButton *buttonEncrypt;
     QPushButton *buttonDecrypt;
-    EncryptWindow *ew;
+    ActionWindow *ew;
 };
 
 #endif // MAINWINDOW_H

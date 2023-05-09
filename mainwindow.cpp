@@ -44,11 +44,13 @@ MainWindow::MainWindow(QWidget *parent)
 
     setLayout(box);
 
-    ew = new EncryptWindow();
+
     connect(buttonEncrypt, SIGNAL(clicked()), this, SLOT(encryptButtonClicked()));
 }
 
 void MainWindow::encryptButtonClicked(){
+
+    ew = new ActionWindow(0,ActionTypes::encrypt);
     ew->show();
 }
 
