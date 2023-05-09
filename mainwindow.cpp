@@ -21,10 +21,11 @@
 
 #include "mainwindow.h"
 
-
 MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent)
 {
+
+
 
     buttonEncrypt = new QPushButton("Ecnrypt");
     buttonDecrypt = new QPushButton("Decrypt");
@@ -43,6 +44,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     setLayout(box);
 
+    ew = new EncryptWindow();
+    connect(buttonEncrypt, SIGNAL(clicked()), this, SLOT(encryptButtonClicked()));
+}
+
+void MainWindow::encryptButtonClicked(){
+    ew->show();
 }
 
 MainWindow::~MainWindow()

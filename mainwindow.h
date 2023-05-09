@@ -27,6 +27,8 @@
 #include <QVBoxLayout>
 #include <QLabel>
 
+#include "encryptwindow.h"
+
 class MainWindow : public QWidget
 {
     Q_OBJECT
@@ -34,11 +36,16 @@ class MainWindow : public QWidget
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void encryptButtonClicked();
+
 private:
     QVBoxLayout *box;
     QLabel *label;
     QPushButton *buttonEncrypt;
     QPushButton *buttonDecrypt;
+    EncryptWindow *ew;
 };
 
 #endif // MAINWINDOW_H
